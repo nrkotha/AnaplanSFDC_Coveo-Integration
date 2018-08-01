@@ -1,0 +1,125 @@
+<div id="search" class="CoveoBox" data-design="new" data-enable-history="true" data-enable-automatic-responsive-mode="true">
+   <div class="CoveoAnalytics" data-search-hub="CustomerCareConsoleSH"></div>
+   <div class="coveo-box-query-section">
+      <div class="CoveoBoxQuerySome" data-include="Subject" data-best="" data-match="" data-use-some-q-r-e="false"></div>
+   </div>
+   <div class="CoveoBoxHeader" data-open-sub-section-by-default="false">
+      <div class="CoveoShareQuery"></div>
+      <div class="CoveoPreferencesPanel">
+         <div class="CoveoResultsPreferences"></div>
+         <div class="CoveoResultsFiltersPreferences"></div>
+      </div>
+      <div class="coveo-box-popups-section">
+         <div class="coveo-tab-section">
+            <a class="CoveoTab" data-id="All" data-caption="All Content"></a>
+            <a class="CoveoTab" data-id="Lithium" data-caption="Community" data-expression="@commonsource==Community" data-sort="date descending"></a>
+            <a class="CoveoTab" data-id="SalesforceCase" data-caption="Salesforce Cases" data-expression="@commonsource==&quot;Salesforce Cases&quot;"></a>
+            <a class="CoveoTab" data-id="SolutionNote" data-caption="Solution Note" data-expression="@hassolutionnote"></a>
+            <a class="CoveoTab" data-id="SalesforceKB" data-caption="Salesforce Knowledge" data-expression="@commonsource==&quot;Salesforce Knowledge&quot;"></a>
+            <a class="CoveoTab" data-id="AnaplanHelp" data-caption="Anapedia" data-expression="@commonsource==&quot;Help Portal&quot;"></a>
+            <a class="CoveoTab" data-id="AnaplanWeb" data-caption="Anaplan.com" data-expression="@commonsource==&quot;Website&quot;"></a>
+            <a class="CoveoAttachedResultsTab" data-id="AttachedResults" data-caption="Attached results"></a>
+            <div class="CoveoBoxPopup" data-hidden="true" data-full-height="true" data-full-width="true" data-title="Facets">
+               <div class="coveo-box-facet-column">
+                  <div class="CoveoFacet" data-title="Source" data-field="@commonsource" data-tab="All, Lithium, SalesforceCase, SalesforceKB, Anapedia, AnaplanWeb"></div>
+                  <div class="CoveoFacet" data-title="Solution Note" data-field="@hassolutionnote" data-tab="All, SolutionNote"></div>
+               </div>
+            </div>
+            <div class="CoveoBoxPopup" data-hidden="true" data-title="Relevance">
+               <div class="CoveoBoxCurrentSort"></div>
+               <div class="coveo-sort-section">
+                  <span class="CoveoSort" data-sort-criteria="relevancy" data-caption="Relevance"></span>
+                  <span class="CoveoSort" data-sort-criteria="date descending,date ascending" data-caption="Date"></span>
+               </div>
+            </div>
+         </div>
+         <div class="coveo-box-settings">
+            <a class="CoveoBoxExpandLink" target="_blank" data-to-primary-tab="false" data-title="Anaplan Search" data-target-tab="Anaplan Search" data-uri="/apex/CustomVFP_CoveoFullSearch"></a>
+            <a class="CoveoBoxEditLink" target="_top"></a>
+            <a class="CoveoBoxCreateArticle" target="_blank"></a>
+         </div>
+         <div class="CoveoBoxQuerySummary"></div>
+      </div>
+   </div>
+   <div class="CoveoTriggers"></div>
+   <div class="CoveoBreadcrumb"></div>
+   <div class="CoveoDidYouMean"></div>
+   <div class="CoveoErrorReport"></div>
+   <div class="CoveoBoxBody">
+      <script id="Default" class="result-template" type="text/underscore">
+         <div class="coveo-result-frame">
+             <div class="coveo-result-row">
+                 <div class="coveo-result-cell coveo-no-wrap" style="vertical-align: middle">
+                         <%if(raw.syssource==='Anaplan Cases'){%>
+                         <span class="CoveoIcon" data-value="icon-customercare" data-with-label=false></span>
+                         <% } %>
+                         <%if(raw.syssource==='Anaplan Knowledge Articles'){%>
+                         <span class="CoveoIcon" data-value="icon-kb" data-with-label=false></span>
+                         <% } %>
+                         <%if(raw.syssource==='Anaplan Help Portal'){%>
+                         <span class="CoveoIcon" data-value="icon_anaplan" data-with-label=false></span>
+                         <% } %>
+                         <% if(raw.syssource==='Anaplan Website') { %>
+                         <span class="CoveoIcon" data-value="icon_anaplan" data-with-label=false></span>
+                         <% } %>
+                        
+                         <% if(raw.liboardinteractionstyle ==='forum') { %>
+                         <span class="CoveoIcon" data-value="icon_forum" data-with-label=false></span>
+                         <% } %>
+                         <% if(raw.liboardinteractionstyle ==='tkb') { %>
+                             <% if(raw.liboardid ==='TrainingClasses') { %>
+                                 <span class="CoveoIcon" data-value="icon_training" data-with-label=false></span>
+                             <% } else { %>
+                              <span class="CoveoIcon" data-value="icon_article" data-with-label=false></span>
+                             <% } %>
+                         <% } %>
+                         <% if(raw.liboardinteractionstyle ==='blog') { %>
+                             <% if(raw.liboardid ==='Videos') { %>
+                                 <span class="CoveoIcon" data-value="icon_videos" data-with-label=false></span>
+                             <% } else { %>   
+                                 <span class="CoveoIcon" data-value="icon_blog" data-with-label=false></span>
+                             <% } %>
+                         <% } %>
+                         <% if(raw.liboardinteractionstyle ==='group') { %>
+                         <span class="CoveoIcon" data-value="icon_group" data-with-label=false></span>
+                         <% } %>
+             <a style="word-wrap: break-word;font-family: GothamMedium !important;font-size: 16px !important" target="_blank" class="CoveoSalesforceResultLink" data-open-in-primary-tab='false'></a>
+                     </div>
+                 <div class="coveo-result-cell" style="text-align:right; padding-right:5px; width:124px;vertical-align: middle;font-size:12px;">
+                     <span class="CoveoAttachToCase" data-display-text="false"></span>
+                     <span class="CoveoFieldValue" data-field="@date" data-helper="dateTime"></span>
+                 </div>
+                 <div class="coveo-result-cell" style="width:20px; vertical-align:middle; text-align:right">
+                     <div class="CoveoBoxResultAction">
+                         <div class="CoveoBoxQuickview"></div>
+                         <div class="CoveoBoxAttachToCase"></div>
+                     </div>
+                 </div>
+             </div>
+             <div class="coveo-result-row">
+                 <div class="coveo-result-cell coveo-no-wrap">
+                     <span class="CoveoExcerpt"></span>
+                 </div>
+             </div>
+         </div>
+      </script>
+   </div>
+</div>
+<script>
+   Coveo.AttachToCase.prototype._handleAttachCallback = Coveo.AttachToCase.prototype.handleAttachCallback;
+   Coveo.AttachToCase.prototype._handleDetachCallback = Coveo.AttachToCase.prototype.handleDetachCallback;
+   
+   Coveo.AttachToCase.prototype.handleDetachCallback = function(args) {
+       this._handleDetachCallback(args);
+       sforce.console.getEnclosingTabId(function(result) {
+           sforce.console.refreshSubtabById(result.id, true);
+       });
+   };
+   
+   Coveo.AttachToCase.prototype.handleAttachCallback = function(args) {
+       this._handleAttachCallback(args);
+       sforce.console.getEnclosingTabId(function(result) {
+           sforce.console.refreshSubtabById(result.id, true);
+       });
+   };
+</script>

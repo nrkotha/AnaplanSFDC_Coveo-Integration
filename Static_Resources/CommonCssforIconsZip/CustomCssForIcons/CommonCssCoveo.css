@@ -1,0 +1,180 @@
+<style type="text/css">
+.CoveoSearchInterface .icon-blank {
+    display: inline-block;
+    background-image: url(Icons/blank.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.coveo-filetype-salesforce-standard-post-small, .coveo-icon.objecttype.coveo-small.Feeditem, 
+.coveo-icon.objecttype.coveo-small.feeditem, .coveo-icon.objecttype.coveo-small.Feedcomment, 
+.coveo-icon.objecttype.coveo-small.feedcomment {
+	background-image: url(Icons/icon_cases.svg);
+	background-color: transparent;
+}
+.coveo-filetype-attachment-small, .coveo-icon.objecttype.coveo-small.Attachment, .coveo-icon.objecttype.coveo-small.attachment {
+	background-image: url(Icons/icon_cases.svg);
+	background-color: transparent;
+}
+.coveo-filetype-case-small, .coveo-icon.objecttype.coveo-small.Case, .coveo-icon.objecttype.coveo-small.case, 
+.coveo-icon.objecttype.coveo-small.Incident, .coveo-icon.objecttype.coveo-small.incident, 
+.coveo-icon.filetype.coveo-small.exchangetask, .coveo-icon.sysfiletype.coveo-small.exchangetask, 
+.coveo-icon.filetype.coveo-small.spprojecttask, .coveo-icon.sysfiletype.coveo-small.spprojecttask, 
+.coveo-icon.filetype.coveo-small.spprojecttasklist, .coveo-icon.sysfiletype.coveo-small.spprojecttasklist {
+	background-image: url(Icons/icon_cases.svg);
+	background-color: transparent;
+}
+.coveo-filetype-salesforce-doctype-html-small, .coveo-icon.filetype.coveo-small.html, .coveo-icon.sysfiletype.coveo-small.html, 
+.coveo-icon.filetype.coveo-small.wiki, .coveo-icon.sysfiletype.coveo-small.wiki, .coveo-icon.filetype.coveo-small.webscraperwebpage, 
+.coveo-icon.sysfiletype.coveo-small.webscraperwebpage, .coveo-icon.filetype.coveo-small.xml, .coveo-icon.sysfiletype.coveo-small.xml {
+	background-image: url(Icons/icon_anaplan.svg);
+	background-color: transparent;
+}
+.coveo-filetype-salesforce-doctype-gdoc-small, .coveo-icon.filetype.coveo-small.txt, .coveo-icon.sysfiletype.coveo-small.txt {
+	background-image: url(Icons/icon_anaplan.svg);
+	background-color: transparent;
+}
+.coveo-filetype-salesforce-doctype-html-small, .coveo-icon.filetype.coveo-small.html, .coveo-icon.sysfiletype.coveo-small.html, 
+.coveo-icon.filetype.coveo-small.wiki, .coveo-icon.sysfiletype.coveo-small.wiki, .coveo-icon.filetype.coveo-small.webscraperwebpage, 
+.coveo-icon.sysfiletype.coveo-small.webscraperwebpage, .coveo-icon.filetype.coveo-small.xml, .coveo-icon.sysfiletype.coveo-small.xml {
+	background-image: url(Icons/icon_anaplan.svg);
+	background-color: transparent;
+}
+.coveo-filetype-custom-small, .coveo-icon.objecttype.coveo-small, .coveo-icon.filetype.coveo-small, 
+.coveo-icon.sysfiletype.coveo-small, .coveo-icon.filetype.coveo-small.jiraissue, 
+.coveo-icon.sysfiletype.coveo-small.jiraissue, .coveo-icon.filetype.coveo-small.exchangefreebusy, 
+.coveo-icon.sysfiletype.coveo-small.exchangefreebusy, .coveo-icon.filetype.coveo-small.exchangemdn, 
+.coveo-icon.sysfiletype.coveo-small.exchangemdn, .coveo-icon.filetype.coveo-small.exchangeobject, 
+.coveo-icon.sysfiletype.coveo-small.exchangeobject, .coveo-icon.filetype.coveo-small.sparea, 
+.coveo-icon.sysfiletype.coveo-small.sparea, .coveo-icon.filetype.coveo-small.spcustomlist, 
+.coveo-icon.sysfiletype.coveo-small.spcustomlist, .coveo-icon.filetype.coveo-small.spsurvey, 
+.coveo-icon.sysfiletype.coveo-small.spsurvey, .coveo-icon.filetype.coveo-small.spsurveylist, 
+.coveo-icon.sysfiletype.coveo-small.spsurveylist, .coveo-icon.filetype.coveo-small.spcustomgridlist, 
+.coveo-icon.sysfiletype.coveo-small.spcustomgridlist, .coveo-icon.filetype.coveo-small.spdecision, 
+.coveo-icon.sysfiletype.coveo-small.spdecision, .coveo-icon.filetype.coveo-small.spdecisionlist, 
+.coveo-icon.sysfiletype.coveo-small.spdecisionlist, .coveo-icon.filetype.coveo-small.spobjective, 
+.coveo-icon.sysfiletype.coveo-small.spobjective, .coveo-icon.filetype.coveo-small.spobjectivelist, 
+.coveo-icon.sysfiletype.coveo-small.spobjectivelist, .coveo-icon.filetype.coveo-small.spthingstobring, 
+.coveo-icon.sysfiletype.coveo-small.spthingstobring, .coveo-icon.filetype.coveo-small.spthingstobringlist, 
+.coveo-icon.sysfiletype.coveo-small.spthingstobringlist, .coveo-icon.filetype.coveo-small.sparealisting, 
+.coveo-icon.sysfiletype.coveo-small.sparealisting, .coveo-icon.filetype.coveo-small.spunknownlist, 
+.coveo-icon.sysfiletype.coveo-small.spunknownlist, .coveo-icon.filetype.coveo-small.spdistributiongroup, 
+.coveo-icon.sysfiletype.coveo-small.spdistributiongroup, .coveo-icon.filetype.coveo-small.spdistributiongrouplist, 
+.coveo-icon.sysfiletype.coveo-small.spdistributiongrouplist, .coveo-icon.filetype.coveo-small.spkeyperformanceindicator, 
+.coveo-icon.sysfiletype.coveo-small.spkeyperformanceindicator, .coveo-icon.filetype.coveo-small.spkeyperformanceindicatorlist, 
+.coveo-icon.sysfiletype.coveo-small.spkeyperformanceindicatorlist, .coveo-icon.filetype.coveo-small.sptab, 
+.coveo-icon.sysfiletype.coveo-small.sptab, .coveo-icon.filetype.coveo-small.sptablist, 
+.coveo-icon.sysfiletype.coveo-small.sptablist, .coveo-icon.filetype.coveo-small.spworkflowprocess, 
+.coveo-icon.sysfiletype.coveo-small.spworkflowprocess, .coveo-icon.filetype.coveo-small.spworkflowprocesslist, 
+.coveo-icon.sysfiletype.coveo-small.spworkflowprocesslist, .coveo-icon.filetype.coveo-small.spcirculation,
+.coveo-icon.sysfiletype.coveo-small.spcirculation, .coveo-icon.filetype.coveo-small.spcirculationlist, 
+.coveo-icon.sysfiletype.coveo-small.spcirculationlist, .coveo-icon.filetype.coveo-small.spwhereabout, 
+.coveo-icon.sysfiletype.coveo-small.spwhereabout, 
+.coveo-icon.filetype.coveo-small.spwhereaboutlist, .coveo-icon.sysfiletype.coveo-small.spwhereaboutlist {
+	background-image: url(Icons/icon_knowledge.svg);
+	background-color: transparent;
+}
+.coveo-filetype-mail-small, .coveo-icon.objecttype.coveo-small.Message, .coveo-icon.objecttype.coveo-small.message, 
+.coveo-icon.objecttype.coveo-small.Email, .coveo-icon.objecttype.coveo-small.email, .coveo-icon.filetype.coveo-small.gmailmessage, 
+.coveo-icon.sysfiletype.coveo-small.gmailmessage, .coveo-icon.filetype.coveo-small.exchangemessage, 
+.coveo-icon.sysfiletype.coveo-small.exchangemessage, .coveo-icon.filetype.coveo-small.exchangedsn, 
+.coveo-icon.sysfiletype.coveo-small.exchangedsn, .coveo-icon.filetype.coveo-small.exchangerecallmessage, 
+.coveo-icon.sysfiletype.coveo-small.exchangerecallmessage, .coveo-icon.filetype.coveo-small.exchangerecallreport, 
+.coveo-icon.sysfiletype.coveo-small.exchangerecallreport, 
+.coveo-icon.filetype.coveo-small.exchangejunkmessage, .coveo-icon.sysfiletype.coveo-small.exchangejunkmessage {
+	background-image: url(Icons/icon_forum.svg);
+	background-color: transparent;
+}
+.CoveoSearchInterface .icon_anaplan {
+    display: inline-block;
+    background-image: url(Icons/icon_anaplan.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.CoveoSearchInterface .icon-customercare {
+    display: inline-block;
+    background-image: url(Icons/icon_cases.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.CoveoSearchInterface .icon-kb {
+    display: inline-block;
+    background-image: url(Icons/icon_knowledge.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.CoveoSearchInterface .icon-community {
+    display: inline-block;
+    background-image: url(Icons/icon_anaplan.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.CoveoSearchInterface .icon_videos {
+    display: inline-block;
+    background-image: url(Icons/icon_videos.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.CoveoSearchInterface .icon_training {
+    display: inline-block;
+    background-image: url(Icons/icon_training.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.CoveoSearchInterface .icon_group {
+    display: inline-block;
+    background-image: url(Icons/icon_group.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.CoveoSearchInterface .icon_article {
+    display: inline-block;
+    background-image: url(Icons/icon_article.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.CoveoSearchInterface .icon_blog {
+    display: inline-block;
+    background-image: url(Icons/icon_blog.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.CoveoSearchInterface .icon_forum {
+    display: inline-block;
+    background-image: url(Icons/icon_forum.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+.CoveoSearchInterface .coveo-logo svg {
+  display : none !important;
+}
+
+.CoveoSearchInterface .coveo-quickview-icon {
+    display: none !important;
+}
+
+.coveo-logo svg {
+  display : none;
+}
+</style>

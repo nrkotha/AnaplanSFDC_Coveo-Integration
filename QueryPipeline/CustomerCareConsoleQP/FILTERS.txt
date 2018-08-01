@@ -1,0 +1,1 @@
+((@commonsource=="Salesforce Cases") AND ((@objecttype=="EmailMessage") OR (@objecttype=="FeedItem") OR (@objecttype=="Attachment") OR (@objecttype=="Case" AND @sfrecordtypename=="Customer Care"))) OR (@commonsource==("Salesforce Knowledge")) OR (@commonsource==("Website")) OR (@commonsource==("Help Portal")) OR (@commonsource==("Community") AND (@objecttype=="Message"))

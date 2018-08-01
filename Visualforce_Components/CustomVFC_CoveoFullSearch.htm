@@ -1,0 +1,269 @@
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+             var root = document.querySelector("#search");
+             var sourceFacetValueCaption = {
+   "Website" : "Anaplan.com",
+   "Help Portal" : "Anapedia"
+   };
+           Coveo.options(root, {
+                 sourceFilter : {
+                     valueCaption : sourceFacetValueCaption
+                 }
+             });    
+         })
+</script>
+<div id="search" class="CoveoSearchInterface" data-enable-history="true" data-design="new">
+   <div class="CoveoFolding" data-field="@litopicurl" data-expand-expression="@filetype==lithiummessage" data-rearrange="date ascending"></div>
+   <div class="CoveoFoldingForThread" data-field="@sfcaseid" data-tab="SalesforceCase" data-parent-field="@sfid" data-child-field="@sfcaseid" data-range="0"></div>
+   <div class="CoveoAnalytics" data-search-hub="CustomerCareConsoleSH"></div>
+   <div class="coveo-search-section">
+      <div class="CoveoSettings"></div>
+      <div class="CoveoSearchbox" data-enable-omnibox="true"></div>
+   </div>
+   <div class="coveo-tab-section">
+      <a class="CoveoTab" data-id="All" data-caption="All Content"></a>
+      <a class="CoveoTab" data-id="Lithium" data-caption="Lithium" data-expression="@litopicid @filetype==lithiummessage" data-sort="date descending"></a>
+      <a class="CoveoTab" data-id="testtab" data-caption="Test Tab" data-expression="@commonsource==(&quot;Salesforce Cases&quot;) AND @hassolutionnote"></a>
+      <a class="CoveoTab" data-id="Salesforce" data-caption="Salesforce" data-expression="@sfid"></a>
+      <a class="CoveoTab" data-id="SalesforceCase" data-caption="Cases" data-expression="@objecttype==(case,casecomment)"></a>
+   </div>
+   <div class="coveo-main-section">
+      <div class="coveo-facet-column">
+         <div id="sourceFilter" class="CoveoFacet" data-title="Source" data-field="@commonsource" data-custom-sort="anaplan cases, anaplan sf knowledge"></div>
+         <div class="CoveoFacet" data-title="Search In" data-field="@hassolutionnote"></div>
+         <div class="CoveoFacet" data-title="Object Type" data-field="@objecttype" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="Topics" data-field="@commontopic" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="Community Types" data-field="@commontype" data-number-of-values="5"></div>
+         <!--<div class="CoveoFacetSlider" data-title="Date Short" data-field="@sfcreateddate" data-date-field="true" data-steps="" data-dropdown-header-label="Filters" data-range-slider="true" data-rounded=""></div>-->
+         <div class="CoveoFacet" data-title="Created Date" data-field="@sfcreateddate" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="Last Modified Date" data-field="@sflastmodifieddate" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="KB Data Category" data-field="@kbdatacategory" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="Account Name" data-field="@apaccountname" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="KB Article Type" data-field="@kbarticletype" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="Case Type" data-field="@apcasetype" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="Case Reason" data-field="@sfcmcasereasonc" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="L3 Category" data-field="@sfcml3categoryc" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="Data Center" data-field="@sfdatacenterc" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="Case Close Reason" data-field="@sfcmcaseclosereasonc" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="Core Number" data-field="@sfcmcorenumberc" data-number-of-values="5"></div>
+         <div class="CoveoFacet" data-title="Type" data-field="@objecttype" data-tab="All"></div>
+         <div class="CoveoFacet" data-title="FileType" data-field="@filetype" data-tab="All"></div>
+         <div class="CoveoFacet" data-title="Author" data-field="@author" data-tab="All"></div>
+         <div class="CoveoFacet" data-title="Year" data-field="@year" data-tab="All"></div>
+         <div class="CoveoFacet" data-title="Month" data-field="@month" data-tab="All"></div>
+      </div>
+      <div class="coveo-results-column">
+         <div class="CoveoShareQuery"></div>
+         <div class="CoveoPreferencesPanel">
+            <div class="CoveoResultsPreferences"></div>
+            <div class="CoveoResultsFiltersPreferences"></div>
+         </div>
+         <div class="CoveoTriggers"></div>
+         <div class="CoveoBreadcrumb"></div>
+         <div class="CoveoDidYouMean"></div>
+         <div class="coveo-results-header">
+            <div class="coveo-summary-section">
+               <span class="CoveoQuerySummary"></span>
+               <span class="CoveoQueryDuration"></span>
+            </div>
+            <div class="coveo-result-layout-section">
+               <span class="CoveoResultLayout"></span>
+            </div>
+            <div class="coveo-sort-section">
+               <span class="CoveoSort" data-sort-criteria="relevancy" data-caption="Relevance"></span>
+               <span class="CoveoSort" data-sort-criteria="date descending,date ascending" data-caption="Date"></span>
+            </div>
+         </div>
+         <!--<div class="CoveoHiddenQuery"></div>-->
+         <div class="CoveoErrorReport" data-pop-up="false"></div>
+         <div class="CoveoResultList" data-layout="list" data-wait-animation="fade" data-auto-select-fields-to-include="true">
+            <script id="Default" class="result-template" type="text/underscore" data-layout="list">
+               <div class="coveo-result-frame">
+               <div class="coveo-result-cell" style="vertical-align:top;text-align:center;width:32px;">
+                               <%if(raw.syssource=='Anaplan Cases'){%>
+                               <span class="CoveoIcon" data-value="icon-customercare" data-with-label=false></span>
+                               <% } %>
+                               <%if(raw.syssource==='Anaplan Knowledge Articles'){%>
+                               <span class="CoveoIcon" data-value="icon-kb" data-with-label=false></span>
+                               <% } %>
+                               <%if(raw.syssource==='Anaplan Help Portal'){%>
+                               <span class="CoveoIcon" data-value="icon_anaplan" data-with-label=false></span>
+                               <% } %>
+                               <% if(raw.syssource==='Anaplan Website') { %>
+                               <span class="CoveoIcon" data-value="icon_anaplan" data-with-label=false></span>
+                               <% } %>
+                              
+                               <% if(raw.liboardinteractionstyle ==='forum') { %>
+                               <span class="CoveoIcon" data-value="icon_forum" data-with-label=false></span>
+                               <% } %>
+                               <% if(raw.liboardinteractionstyle ==='tkb') { %>
+                                   <% if(raw.liboardid ==='TrainingClasses') { %>
+                                       <span class="CoveoIcon" data-value="icon_training" data-with-label=false></span>
+                                   <% } else { %>
+                                    <span class="CoveoIcon" data-value="icon_article" data-with-label=false></span>
+                                   <% } %>
+                               <% } %>
+                               <% if(raw.liboardinteractionstyle ==='blog') { %>
+                                   <% if(raw.liboardid ==='Videos') { %>
+                                       <span class="CoveoIcon" data-value="icon_videos" data-with-label=false></span>
+                                   <% } else { %>   
+                                       <span class="CoveoIcon" data-value="icon_blog" data-with-label=false></span>
+                                   <% } %>
+                               <% } %>
+                               <% if(raw.liboardinteractionstyle ==='group') { %>
+                               <span class="CoveoIcon" data-value="icon_group" data-with-label=false></span>
+                               <% } %>
+                                   <div class="CoveoQuickview" data-always-show="true">
+                                   </div>
+                       </div>
+                                       <div class="coveo-result-cell" style="vertical-align: top;padding-left: 16px;">
+                                           <div class="coveo-result-row" style="margin-top:0;">
+                                           <div class="coveo-result-cell" style="vertical-align:top;font-size:16px;word-wrap: break-word;">
+                                           <a class="CoveoResultLink" style="font-size: 16px !important; font-family: GothamMedium !important;" data-always-open-in-new-window='true'></a>
+                                           </div>
+                                           <div class="coveo-result-cell" style="width:120px;text-align:right;font-size:12px">
+                                           <div class="coveo-result-row">
+                                           <span class="CoveoFieldValue" data-field="@date" data-helper="date"></span>
+                                           </div>
+                                           </div>
+                                           </div>
+                                           <div class="coveo-result-row" style="margin-top:10px;">
+                                           <div class="coveo-result-cell">
+                                           <span class="CoveoExcerpt"></span>
+                                           </div>
+                                           </div>
+                                           <div class="coveo-result-row" style="margin-top:10px;">
+                                           <div class="coveo-result-cell">
+                       <span class="CoveoFieldValue" data-field="@author" data-text-caption="Author" style="margin-right:30px;"></span>
+                       <span class="CoveoFieldValue" data-field="@source" data-text-caption="Source" style="margin-right:30px;"></span>
+                       <span class="CoveoFieldValue" data-field="@language" data-text-caption="Language" style="margin-right:30px;"></span>
+                       <span class="CoveoFieldValue" data-field="@filetype" data-text-caption="File Type" style="margin-right:30px;"></span>
+                     </div>
+                   </div>
+                   <%if(raw.filetype==='lithiummessage'){%>
+                                                   <div class="coveo-result-row">
+                                                       <div class="coveo-result-cell" style="font-size:13px;">
+                                                           <span class="CoveoResultFolding" data-result-template-id="LithiumChildResult" data-more-caption="ShowCompleteThread" data-less-caption="ShowOnlyTopMatchingPosts"></span>
+                                                       </div>
+                                                       <% } %>
+                                   </div>
+                 </div>
+               </div>
+            </script>
+            <script id="LithiumChildResult" type="text/underscore">
+               <div class="coveo-result-frame coveo-email-result">
+                   <div class="coveo-result-cell">
+               <div class="CoveoQuickview" data-always-show="true"></div>
+                   </div>
+                   <div class="coveo-result-cell" style="vertical-align: top;padding-left: 16px;">
+                       <div class="coveo-result-row" style="margin-top:0;">
+                           <div class="coveo-result-cell" style="vertical-align:top;font-size:16px;word-wrap: break-word;">
+                               <a class="CoveoResultLink" data-always-open-in-new-window='true'></a>
+                           </div>
+                           <div class="coveo-result-cell" style="width:120px;text-align:right;font-size:12px">
+                               <div class="coveo-result-row">
+                                   <span style="font-size:11.5px" class="CoveoFieldValue" data-field="@date" data-helper="dateTime"></span>
+                               </div>
+                           </div>
+                           </div>
+                           <div class="coveo-result-row" style="margin-top:10px;">
+                           <div class="coveo-result-cell">
+                                   <span class="CoveoExcerpt"></span>
+                           </div>
+                       </div>
+                       <!--<div class="coveo-result-row">
+                           <div class="coveo-result-cell" style="font-size:13px;">
+                               <span class="CoveoResultFolding" data-result-template-id="LithiumChildResult" data-more-caption="ShowCompleteThread" data-less-caption="ShowOnlyTopMatchingPosts"></span>
+                           </div>-->
+                       </div>
+               
+                       <div class="coveo-result-row" style="margin-top:10px;">
+                           <div class="coveo-result-cell">
+                            <span class="CoveoFieldValue" data-field="@author" data-text-caption="Author" style="margin-right:30px;"></span>
+                            <span class="CoveoFieldValue" data-field="@commonsource" data-text-caption="Source" style="margin-right:30px;"></span>
+                           <span class="CoveoFieldValue" data-field="@language" data-text-caption="Language" style="margin-right:30px;"></span>
+                           <span class="CoveoFieldValue" data-field="@filetype" data-text-caption="File Type" style="margin-right:30px;"></span>
+                           </div>
+                       </div>
+                       <div class="coveo-result-row" style="margin-top:10px;">
+                           <div class="coveo-result-cell">
+                           </div>
+                       </div>
+                   </div>
+               </div>
+            </script>
+         </div>
+         <div class="CoveoResultList" data-layout="card" data-wait-animation="fade" data-auto-select-fields-to-include="true">
+            <script id="DefaultforCard" class="result-template" type="text/underscore" data-layout="card">
+               <div class="coveo-result-frame">
+               <div class="coveo-result-row" style="margin-bottom: 10px">
+               <div class="coveo-result-cell" style="vertical-align:top;text-align:center;width:32px;">
+                               <%if(raw.syssource=='Anaplan Cases'){%>
+                               <span class="CoveoIcon" data-value="icon-customercare" data-with-label=false></span>
+                               <% } %>
+                               <%if(raw.syssource==='Anaplan Knowledge Articles'){%>
+                               <span class="CoveoIcon" data-value="icon-kb" data-with-label=false></span>
+                               <% } %>
+                               <%if(raw.syssource==='Anaplan Help Portal'){%>
+                               <span class="CoveoIcon" data-value="icon_anaplan" data-with-label=false></span>
+                               <% } %>
+                               <% if(raw.syssource==='Anaplan Website') { %>
+                               <span class="CoveoIcon" data-value="icon_anaplan" data-with-label=false></span>
+                               <% } %>
+                              
+                               <% if(raw.liboardinteractionstyle ==='forum') { %>
+                               <span class="CoveoIcon" data-value="icon_forum" data-with-label=false></span>
+                               <% } %>
+                               <% if(raw.liboardinteractionstyle ==='tkb') { %>
+                                   <% if(raw.liboardid ==='TrainingClasses') { %>
+                                       <span class="CoveoIcon" data-value="icon_training" data-with-label=false></span>
+                                   <% } else { %>
+                                    <span class="CoveoIcon" data-value="icon_article" data-with-label=false></span>
+                                   <% } %>
+                               <% } %>
+                               <% if(raw.liboardinteractionstyle ==='blog') { %>
+                                   <% if(raw.liboardid ==='Videos') { %>
+                                       <span class="CoveoIcon" data-value="icon_videos" data-with-label=false></span>
+                                   <% } else { %>   
+                                       <span class="CoveoIcon" data-value="icon_blog" data-with-label=false></span>
+                                   <% } %>
+                               <% } %>
+                               <% if(raw.liboardinteractionstyle ==='group') { %>
+                               <span class="CoveoIcon" data-value="icon_group" data-with-label=false></span>
+                               <% } %>
+                                         </div>
+                                       <div class="coveo-result-cell" style="padding-left: 2em; vertical-align: middle;word-wrap: break-word;">
+                                             <a class="CoveoResultLink" style="font-size: 16px !important; font-family: GothamMedium !important;" data-always-open-in-new-window='true'></a>
+                                           </div>
+                                     </div>
+                                     <div class="coveo-result-row">
+                                           <div class="coveo-result-cell" style="padding-top:5px; padding-bottom:5px;">
+                                     <span class="CoveoExcerpt"></span>
+                                           </div>
+                                         </div>
+                                         <div class="coveo-result-row">
+                                               <span class="CoveoFieldValue" data-field="@date" data-helper="dateTime"></span>
+                                             </div>
+                                             <div class="CoveoCardActionBar">
+                                               <span class="CoveoQuickview" data-always-show="true"></span>
+                                               
+                                                 <div class="CoveoCardOverlay" data-title="Details" data-icon="coveo-sprites-main-search-active">
+                                                     <div class="coveo-result-row" style="margin-top:10px;">
+                                                         <div class="coveo-result-cell">
+                                                             <span class="CoveoFieldValue" data-field="@commonsource" data-text-caption="Source :" style="margin-right:30px;"></span>
+                                                             <span class="CoveoFieldValue" data-field="@language" data-text-caption="Language :" style="margin-right:30px;"></span>
+                                                             <span class="CoveoFieldValue" data-field="@filetype" data-text-caption="File Type :" style="margin-right:30px;"></span>
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                     </div>
+                                     </div>
+                              
+            </script>
+         </div>
+         <div class="CoveoPager"></div>
+         <div class="CoveoResultsPerPage"></div>
+      </div>
+   </div>
+</div>
